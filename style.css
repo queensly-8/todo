@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(120deg, #dfff00, #9fe2bf);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body,
+h1 {
+  margin: 1rem;
+}
+
+header {
+  font-size: 1.5rem;
+}
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* main,
+form {
+  min-height: 20vh;
+  justify-content: center;
+  align-items: center;
+} */
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  background: white;
+}
+form button {
+  color: #50c878;
+  background: white;
+  cursor: pointer;
+}
+form button:hover {
+  background: #de3163;
+  /*color of text when hovered  */
+  color: white;
+}
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todolist {
+  min-width: 30%;
+  list-style: none;
+}
+.todo {
+  margin: 0.5rem;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease;
+}
+.todo li {
+  flex: 1;
+}
+.trash-btn,
+.complete-btn {
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.complete-btn {
+  backround: green;
+}
+.todo-item {
+  padding-top: 0rem 0.5rem;
+}
+.fa-trash,
+.fa-check {
+  /* //cannot click this anymore the icon*/
+  pointer-events: none;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.fall {
+  transform: translateY(8rem) rotateZ(40deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+.select {
+  margin: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  color: black;
+  width: 10rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: greenyellow;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.select:hover::after {
+  background: white;
+  color: greenyellow;
+}
